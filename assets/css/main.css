@@ -1694,25 +1694,24 @@ input, select, textarea {
     border: 1px solid white;
 }
 
-/* --- FIX NAV:  --- */
+/* --- NAV FIX (sin recortes ni solapes): permitir 2 filas --- */
 #header nav ul {
-  flex-wrap: nowrap;      
+  display: flex;
+  flex-wrap: wrap;          /* CLAVE: permite que pase a 2 filas */
+  justify-content: center;
 }
 
 #header nav ul li {
-  min-width: 0;          
-  flex: 1 1 0;            
+  flex: 0 0 auto;           /* cada botón mide lo que necesita */
 }
 
 #header nav ul li a {
-  min-width: 0;          
-  width: 100%;
+  display: block;
+  min-width: 8.5rem;        /* ajusta el ancho mínimo del botón */
   padding: 0 1rem;
-  letter-spacing: 0.14rem; 
-  font-size: 0.75rem;      
-  white-space: nowrap;
-  overflow: visible;       
-  box-sizing: border-box;
-}
+  white-space: nowrap;      /* mantiene el texto en 1 línea */
+  letter-spacing: 0.16rem;  /* un poco menos que 0.2 */
+  font-size: 0.75rem;       /* un poco menos */
+
 
 
